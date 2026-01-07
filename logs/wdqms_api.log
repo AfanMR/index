@@ -1,0 +1,12 @@
+2025-10-14 06:32:30 - Database Status API Request
+URL: https://wdqms.wmo.int/wdqmsapi/v1/sixhour-periods/?file_type=synop&page_type=DB_STATUS&baseline=GBON&page_size=50&page=1
+2025-10-14 06:32:32 - Response received
+HTTP Code: 200
+2025-10-14 06:32:38 - Database Status API Request
+URL: https://wdqms.wmo.int/wdqmsapi/v1/sixhour-periods/?file_type=temp&page_type=DB_STATUS&baseline=GBON&page_size=50&page=1
+2025-10-14 06:32:39 - Response received
+HTTP Code: 200
+2025-10-14 06:32:40 - Database Status API Request
+URL: https://wdqms.wmo.int/wdqmsapi/v1/sixhour-periods/?file_type=synop&page_type=DB_STATUS&baseline=GBON&page_size=50&page=1
+2025-10-14 06:32:41 - Response received
+HTTP Code: 200

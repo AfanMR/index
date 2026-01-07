@@ -1,0 +1,176 @@
+2025-10-14 10:15:52 - Fetching WDQMS data from: https://wdqms.wmo.int/wdqmsapi/v1/sixhour-periods/?baseline=GBON&file_type=synop&page_type=DB_STATUS
+2025-10-14 10:15:55 - WDQMS data received successfully. Records: 14084
+2025-10-14 10:15:56 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-30/00
+2025-10-14 10:15:56 - Availability check result: DWD/2025-10-30/00 = available (HTTP 200)
+2025-10-14 10:15:56 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-30/06
+2025-10-14 10:15:57 - Availability check result: DWD/2025-10-30/06 = available (HTTP 200)
+2025-10-14 10:15:57 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-30/12
+2025-10-14 10:15:57 - Availability check result: DWD/2025-10-30/12 = available (HTTP 200)
+2025-10-14 10:15:57 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-30/18
+2025-10-14 10:15:58 - Availability check result: DWD/2025-10-30/18 = available (HTTP 200)
+2025-10-14 10:15:58 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-30/00
+2025-10-14 10:15:59 - Availability check result: ECMWF/2025-10-30/00 = available (HTTP 200)
+2025-10-14 10:15:59 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-30/06
+2025-10-14 10:15:59 - Availability check result: ECMWF/2025-10-30/06 = available (HTTP 200)
+2025-10-14 10:15:59 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-30/12
+2025-10-14 10:16:00 - Availability check result: ECMWF/2025-10-30/12 = available (HTTP 200)
+2025-10-14 10:16:00 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-30/18
+2025-10-14 10:16:01 - Availability check result: ECMWF/2025-10-30/18 = available (HTTP 200)
+2025-10-14 10:16:01 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-30/00
+2025-10-14 10:16:01 - Availability check result: JMA/2025-10-30/00 = available (HTTP 200)
+2025-10-14 10:16:01 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-30/06
+2025-10-14 10:16:02 - Availability check result: JMA/2025-10-30/06 = available (HTTP 200)
+2025-10-14 10:16:02 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-30/12
+2025-10-14 10:16:03 - Availability check result: JMA/2025-10-30/12 = available (HTTP 200)
+2025-10-14 10:16:03 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-30/18
+2025-10-14 10:16:03 - Availability check result: JMA/2025-10-30/18 = available (HTTP 200)
+2025-10-14 10:16:03 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-30/00
+2025-10-14 10:16:04 - Availability check result: NCEP/2025-10-30/00 = available (HTTP 200)
+2025-10-14 10:16:04 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-30/06
+2025-10-14 10:16:05 - Availability check result: NCEP/2025-10-30/06 = available (HTTP 200)
+2025-10-14 10:16:05 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-30/12
+2025-10-14 10:16:05 - Availability check result: NCEP/2025-10-30/12 = available (HTTP 200)
+2025-10-14 10:16:05 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-30/18
+2025-10-14 10:16:06 - Availability check result: NCEP/2025-10-30/18 = available (HTTP 200)
+2025-10-14 10:16:06 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-29/00
+2025-10-14 10:16:07 - Availability check result: DWD/2025-10-29/00 = available (HTTP 200)
+2025-10-14 10:16:07 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-29/06
+2025-10-14 10:16:07 - Availability check result: DWD/2025-10-29/06 = available (HTTP 200)
+2025-10-14 10:16:07 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-29/12
+2025-10-14 10:16:08 - Availability check result: DWD/2025-10-29/12 = available (HTTP 200)
+2025-10-14 10:16:08 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-29/18
+2025-10-14 10:16:08 - Availability check result: DWD/2025-10-29/18 = available (HTTP 200)
+2025-10-14 10:16:08 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-29/00
+2025-10-14 10:16:09 - Availability check result: ECMWF/2025-10-29/00 = available (HTTP 200)
+2025-10-14 10:16:09 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-29/06
+2025-10-14 10:16:10 - Availability check result: ECMWF/2025-10-29/06 = available (HTTP 200)
+2025-10-14 10:16:10 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-29/12
+2025-10-14 10:16:11 - Availability check result: ECMWF/2025-10-29/12 = available (HTTP 200)
+2025-10-14 10:16:11 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-29/18
+2025-10-14 10:16:11 - Availability check result: ECMWF/2025-10-29/18 = available (HTTP 200)
+2025-10-14 10:16:11 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-29/00
+2025-10-14 10:16:12 - Availability check result: JMA/2025-10-29/00 = available (HTTP 200)
+2025-10-14 10:16:12 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-29/06
+2025-10-14 10:16:13 - Availability check result: JMA/2025-10-29/06 = available (HTTP 200)
+2025-10-14 10:16:13 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-29/12
+2025-10-14 10:16:13 - Availability check result: JMA/2025-10-29/12 = available (HTTP 200)
+2025-10-14 10:16:13 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-29/18
+2025-10-14 10:16:14 - Availability check result: JMA/2025-10-29/18 = available (HTTP 200)
+2025-10-14 10:16:14 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-29/00
+2025-10-14 10:16:14 - Availability check result: NCEP/2025-10-29/00 = available (HTTP 200)
+2025-10-14 10:16:14 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-29/06
+2025-10-14 10:16:15 - Availability check result: NCEP/2025-10-29/06 = available (HTTP 200)
+2025-10-14 10:16:15 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-29/12
+2025-10-14 10:16:15 - Availability check result: NCEP/2025-10-29/12 = available (HTTP 200)
+2025-10-14 10:16:15 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-29/18
+2025-10-14 10:16:16 - Availability check result: NCEP/2025-10-29/18 = available (HTTP 200)
+2025-10-14 10:16:16 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-28/00
+2025-10-14 10:16:17 - Availability check result: DWD/2025-10-28/00 = available (HTTP 200)
+2025-10-14 10:16:17 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-28/06
+2025-10-14 10:16:18 - Availability check result: DWD/2025-10-28/06 = available (HTTP 200)
+2025-10-14 10:16:18 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-28/12
+2025-10-14 10:16:18 - Availability check result: DWD/2025-10-28/12 = available (HTTP 200)
+2025-10-14 10:16:18 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-28/18
+2025-10-14 10:16:19 - Availability check result: DWD/2025-10-28/18 = available (HTTP 200)
+2025-10-14 10:16:19 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-28/00
+2025-10-14 10:16:19 - Availability check result: ECMWF/2025-10-28/00 = available (HTTP 200)
+2025-10-14 10:16:19 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-28/06
+2025-10-14 10:16:20 - Availability check result: ECMWF/2025-10-28/06 = available (HTTP 200)
+2025-10-14 10:16:20 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-28/12
+2025-10-14 10:16:21 - Availability check result: ECMWF/2025-10-28/12 = available (HTTP 200)
+2025-10-14 10:16:21 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-28/18
+2025-10-14 10:16:22 - Availability check result: ECMWF/2025-10-28/18 = available (HTTP 200)
+2025-10-14 10:16:22 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-28/00
+2025-10-14 10:16:22 - Availability check result: JMA/2025-10-28/00 = available (HTTP 200)
+2025-10-14 10:16:22 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-28/06
+2025-10-14 10:16:23 - Availability check result: JMA/2025-10-28/06 = available (HTTP 200)
+2025-10-14 10:16:23 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-28/12
+2025-10-14 10:16:24 - Availability check result: JMA/2025-10-28/12 = available (HTTP 200)
+2025-10-14 10:16:24 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-28/18
+2025-10-14 10:16:24 - Availability check result: JMA/2025-10-28/18 = available (HTTP 200)
+2025-10-14 10:16:24 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-28/00
+2025-10-14 10:16:25 - Availability check result: NCEP/2025-10-28/00 = available (HTTP 200)
+2025-10-14 10:16:25 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-28/06
+2025-10-14 10:16:25 - Availability check result: NCEP/2025-10-28/06 = available (HTTP 200)
+2025-10-14 10:16:25 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-28/12
+2025-10-14 10:16:26 - Availability check result: NCEP/2025-10-28/12 = available (HTTP 200)
+2025-10-14 10:16:26 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-28/18
+2025-10-14 10:16:27 - Availability check result: NCEP/2025-10-28/18 = available (HTTP 200)
+2025-10-14 10:16:27 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-27/00
+2025-10-14 10:16:27 - Availability check result: DWD/2025-10-27/00 = available (HTTP 200)
+2025-10-14 10:16:27 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-27/06
+2025-10-14 10:16:28 - Availability check result: DWD/2025-10-27/06 = available (HTTP 200)
+2025-10-14 10:16:28 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-27/12
+2025-10-14 10:16:29 - Availability check result: DWD/2025-10-27/12 = available (HTTP 200)
+2025-10-14 10:16:29 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-27/18
+2025-10-14 10:16:29 - Availability check result: DWD/2025-10-27/18 = available (HTTP 200)
+2025-10-14 10:16:29 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-27/00
+2025-10-14 10:16:30 - Availability check result: ECMWF/2025-10-27/00 = available (HTTP 200)
+2025-10-14 10:16:30 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-27/06
+2025-10-14 10:16:30 - Availability check result: ECMWF/2025-10-27/06 = available (HTTP 200)
+2025-10-14 10:16:30 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-27/12
+2025-10-14 10:16:31 - Availability check result: ECMWF/2025-10-27/12 = available (HTTP 200)
+2025-10-14 10:16:31 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-27/18
+2025-10-14 10:16:32 - Availability check result: ECMWF/2025-10-27/18 = available (HTTP 200)
+2025-10-14 10:16:32 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-27/00
+2025-10-14 10:16:32 - Availability check result: JMA/2025-10-27/00 = available (HTTP 200)
+2025-10-14 10:16:32 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-27/06
+2025-10-14 10:16:33 - Availability check result: JMA/2025-10-27/06 = available (HTTP 200)
+2025-10-14 10:16:33 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-27/12
+2025-10-14 10:16:34 - Availability check result: JMA/2025-10-27/12 = available (HTTP 200)
+2025-10-14 10:16:34 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-27/18
+2025-10-14 10:16:34 - Availability check result: JMA/2025-10-27/18 = available (HTTP 200)
+2025-10-14 10:16:34 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-27/00
+2025-10-14 10:16:35 - Availability check result: NCEP/2025-10-27/00 = available (HTTP 200)
+2025-10-14 10:16:35 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-27/06
+2025-10-14 10:16:36 - Availability check result: NCEP/2025-10-27/06 = available (HTTP 200)
+2025-10-14 10:16:36 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-27/12
+2025-10-14 10:16:36 - Availability check result: NCEP/2025-10-27/12 = available (HTTP 200)
+2025-10-14 10:16:36 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-27/18
+2025-10-14 10:16:37 - Availability check result: NCEP/2025-10-27/18 = available (HTTP 200)
+2025-10-14 10:16:37 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-26/00
+2025-10-14 10:16:38 - Availability check result: DWD/2025-10-26/00 = available (HTTP 200)
+2025-10-14 10:16:38 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-26/06
+2025-10-14 10:16:39 - Availability check result: DWD/2025-10-26/06 = available (HTTP 200)
+2025-10-14 10:16:39 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-26/12
+2025-10-14 10:16:39 - Availability check result: DWD/2025-10-26/12 = available (HTTP 200)
+2025-10-14 10:16:39 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-26/18
+2025-10-14 10:16:40 - Availability check result: DWD/2025-10-26/18 = available (HTTP 200)
+2025-10-14 10:16:40 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-26/00
+2025-10-14 10:16:41 - Availability check result: ECMWF/2025-10-26/00 = available (HTTP 200)
+2025-10-14 10:16:41 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-26/06
+2025-10-14 10:16:41 - Availability check result: ECMWF/2025-10-26/06 = available (HTTP 200)
+2025-10-14 10:16:41 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-26/12
+2025-10-14 10:16:42 - Availability check result: ECMWF/2025-10-26/12 = available (HTTP 200)
+2025-10-14 10:16:42 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/ECMWF/2025-10-26/18
+2025-10-14 10:16:42 - Availability check result: ECMWF/2025-10-26/18 = available (HTTP 200)
+2025-10-14 10:16:43 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-26/00
+2025-10-14 10:16:43 - Availability check result: JMA/2025-10-26/00 = available (HTTP 200)
+2025-10-14 10:16:43 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-26/06
+2025-10-14 10:16:44 - Availability check result: JMA/2025-10-26/06 = available (HTTP 200)
+2025-10-14 10:16:44 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-26/12
+2025-10-14 10:16:44 - Availability check result: JMA/2025-10-26/12 = available (HTTP 200)
+2025-10-14 10:16:45 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/JMA/2025-10-26/18
+2025-10-14 10:16:45 - Availability check result: JMA/2025-10-26/18 = available (HTTP 200)
+2025-10-14 10:16:45 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-26/00
+2025-10-14 10:16:46 - Availability check result: NCEP/2025-10-26/00 = available (HTTP 200)
+2025-10-14 10:16:46 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-26/06
+2025-10-14 10:16:46 - Availability check result: NCEP/2025-10-26/06 = available (HTTP 200)
+2025-10-14 10:16:46 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-26/12
+2025-10-14 10:16:48 - Availability check result: NCEP/2025-10-26/12 = available (HTTP 200)
+2025-10-14 10:16:48 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/NCEP/2025-10-26/18
+2025-10-14 10:16:48 - Availability check result: NCEP/2025-10-26/18 = available (HTTP 200)
+2025-10-14 10:16:48 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-25/00
+2025-10-14 10:16:49 - Availability check result: DWD/2025-10-25/00 = available (HTTP 200)
+2025-10-14 10:16:49 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-25/06
+2025-10-14 10:16:50 - Availability check result: DWD/2025-10-25/06 = available (HTTP 200)
+2025-10-14 10:16:50 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-25/18
+2025-10-14 10:16:51 - Availability check result: DWD/2025-10-25/18 = available (HTTP 200)
+2025-10-14 10:16:51 - Checking availability: https://wdqms.wmo.int/gbon/synop/six_hour/availability/pressure/DWD/2025-10-25/12
+2025-10-14 10:16:51 - Availability check result: DWD/2025-10-25/12 = available (HTTP 200)
+2025-10-14 10:27:36 - Fetching WDQMS data from: https://wdqms.wmo.int/wdqmsapi/v1/sixhour-periods/?baseline=GBON&file_type=synop&page_type=DB_STATUS
+2025-10-14 10:27:39 - WDQMS data received successfully. Records: 14084
+2025-10-14 10:28:55 - Fetching WDQMS data from: https://wdqms.wmo.int/wdqmsapi/v1/sixhour-periods/?baseline=GBON&file_type=synop&page_type=DB_STATUS
+2025-10-14 10:28:58 - WDQMS data received successfully. Records: 14084
+2025-10-14 10:32:01 - Step 1: Fetching WDQMS data from: https://wdqms.wmo.int/wdqmsapi/v1/sixhour-periods/?baseline=GBON&file_type=synop&page_type=DB_STATUS
+2025-10-14 10:32:05 - WDQMS data received successfully. Records: 14084

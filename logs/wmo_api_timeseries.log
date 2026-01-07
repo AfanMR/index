@@ -1,0 +1,38 @@
+2026-01-05 09:00:35 - Time-series request
+Territory: SGP,IDN,BRN,PHL,TLS,PNG,MYS, Year: 2025, Month: 12, View: daily
+Dates to fetch: 31
+2026-01-05 09:02:46 - Time-series request
+Territory: IDN, Year: 2025, Month: 12, View: daily
+Dates to fetch: 31
+2026-01-05 09:05:34 - Time-series request
+Territory: IDN, Year: 2025, Month: 12, View: daily
+Dates to fetch: 31
+2026-01-05 09:07:43 - Time-series request
+Territory: SGP,IDN,BRN,PHL,TLS,PNG,MYS, Year: 2025, Month: 12, View: daily
+Dates to fetch: 31
+2026-01-05 09:09:47 - Time-series request
+Territory: SGP,IDN,BRN,PHL,TLS,PNG,MYS, Year: 2025, Month: 12, View: daily
+Dates to fetch: 31
+2026-01-05 09:11:54 - Time-series request
+Territory: SGP,IDN,BRN,PHL,TLS,PNG,MYS, Year: 2025, Month: 12, View: daily
+Dates to fetch: 31
+2026-01-05 09:13:55 - Time-series request
+Territory: IDN, Year: 2025, Month: 12, View: daily
+Dates to fetch: 31
+2026-01-05 09:16:14 - Time-series request
+Territory: SGP,IDN,BRN,PHL,TLS,PNG,MYS, Year: 2025, Month: 12, View: daily
+Dates to fetch: 31
+2026-01-05 09:18:15 - Time-series request
+Territory: SGP,IDN,BRN,PHL,TLS,PNG,MYS, Year: 2025, Month: 12, View: weekly
+Dates to fetch: 4
+2026-01-05 09:18:42 - Success: 81 stations, 4 dates
+2026-01-05 09:19:38 - Time-series request
+Territory: IDN, Year: 2025, Month: 12, View: weekly
+Dates to fetch: 4
+2026-01-05 09:20:04 - Success: 56 stations, 4 dates
+2026-01-05 09:20:17 - Time-series request
+Territory: IDN, Year: 2025, Month: 12, View: daily
+Dates to fetch: 31
+2026-01-05 09:22:24 - Time-series request
+Territory: IDN, Year: 2025, Month: 12, View: daily
+Dates to fetch: 31

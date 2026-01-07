@@ -1,0 +1,2 @@
+2025-10-14 04:43:16 - Quality Reports API Call: https://wdqms.wmo.int/wdqmsapi/v1/download/gbon/temp/daily/availability/?date=2025-10-12&variable=pressure&centers=DWD,ECMWF,JMA,NCEP&countries=SGP,IDN,BRN,PHL,TLS,PNG,MYS
+2025-10-14 04:43:17 - Successfully fetched 0 stations
