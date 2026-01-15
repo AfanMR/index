@@ -4115,3 +4115,137 @@ Complete: 81
 Issues: 0
 Critical: 0
 Not received: 0
+2026-01-15 04:09:13 - Request started
+Territory: SGP,IDN,BRN,PHL,TLS,PNG,MYS
+Date: 2025-12
+Period: monthly
+Time Period: 00
+Variable: pressure
+API URL: https://wdqms.wmo.int/wdqmsapi/v1/download/gbon/synop/monthly/availability/?date=2025-12&period=00&variable=pressure&centers=DWD,ECMWF,JMA,NCEP
+Filtering countries: SGP,IDN,BRN,PHL,TLS,PNG,MYS
+2026-01-15 04:09:19 - Response received
+HTTP Code: 200
+Response (first 1000 chars): name,wigosid,country code,in OSCAR,longitude,latitude,#received,#expected (GBON),color code,description,variable,date,center
+Robe,0-231-0-63474,ETH,True,40.02659,7.11342,0,744,black,Not received in period,pressure,2025-12-01 00:00:00+00:00,JMA
+Robe,0-231-0-63474,ETH,True,40.02659,7.11342,0,744,black,Not received in period,pressure,2025-12-01 00:00:00+00:00,NCEP
+Robe,0-231-0-63474,ETH,True,40.02659,7.11342,0,744,black,Not received in period,pressure,2025-12-01 00:00:00+00:00,ECMWF
+Robe,0-231-0-63474,ETH,True,40.02659,7.11342,0,744,black,Not received in period,pressure,2025-12-01 00:00:00+00:00,DWD
+AFEQ,0-376-0-40170,ISR,True,35.1123,32.8466,387,408,green,Normal (>= 80%),pressure,2025-12-01 00:00:00+00:00,JMA
+AFEQ,0-376-0-40170,ISR,True,35.1123,32.8466,340,408,green,Normal (>= 80%),pressure,2025-12-01 00:00:00+00:00,NCEP
+AFEQ,0-376-0-40170,ISR,True,35.1123,32.8466,407,408,green,Normal (>= 80%),pressure,2025-12-01 00:00:00+00:00,ECMWF
+AFEQ,0-376-0-40170,ISR,True,35.1123,32.8466,36
+2026-01-15 04:09:19 - JSON Parsing
+JSON Error: Syntax error
+2026-01-15 04:09:19 - Trying CSV parsing
+2026-01-15 04:09:19 - Final Results
+Total stations: 81
+Complete: 81
+Issues: 0
+Critical: 0
+Not received: 0
+2026-01-15 04:14:13 - Request started
+Territory: SGP,IDN,BRN,PHL,TLS,PNG,MYS
+Date: 2025-12
+Period: monthly
+Time Period: 00
+Variable: pressure
+API URL: https://wdqms.wmo.int/wdqmsapi/v1/download/gbon/synop/monthly/availability/?date=2025-12&period=00&variable=pressure&centers=DWD,ECMWF,JMA,NCEP
+Filtering countries: SGP,IDN,BRN,PHL,TLS,PNG,MYS
+2026-01-15 04:14:24 - Response received
+HTTP Code: 200
+Response (first 1000 chars): name,wigosid,country code,in OSCAR,longitude,latitude,#received,#expected (GBON),color code,description,variable,date,center
+Robe,0-231-0-63474,ETH,True,40.02659,7.11342,0,744,black,Not received in period,pressure,2025-12-01 00:00:00+00:00,JMA
+Robe,0-231-0-63474,ETH,True,40.02659,7.11342,0,744,black,Not received in period,pressure,2025-12-01 00:00:00+00:00,NCEP
+Robe,0-231-0-63474,ETH,True,40.02659,7.11342,0,744,black,Not received in period,pressure,2025-12-01 00:00:00+00:00,ECMWF
+Robe,0-231-0-63474,ETH,True,40.02659,7.11342,0,744,black,Not received in period,pressure,2025-12-01 00:00:00+00:00,DWD
+AFEQ,0-376-0-40170,ISR,True,35.1123,32.8466,387,408,green,Normal (>= 80%),pressure,2025-12-01 00:00:00+00:00,JMA
+AFEQ,0-376-0-40170,ISR,True,35.1123,32.8466,340,408,green,Normal (>= 80%),pressure,2025-12-01 00:00:00+00:00,NCEP
+AFEQ,0-376-0-40170,ISR,True,35.1123,32.8466,407,408,green,Normal (>= 80%),pressure,2025-12-01 00:00:00+00:00,ECMWF
+AFEQ,0-376-0-40170,ISR,True,35.1123,32.8466,36
+2026-01-15 04:14:24 - JSON Parsing
+JSON Error: Syntax error
+2026-01-15 04:14:24 - Trying CSV parsing
+2026-01-15 04:14:25 - Final Results
+Total stations: 81
+Complete: 81
+Issues: 0
+Critical: 0
+Not received: 0
+2026-01-15 04:19:13 - Request started
+Territory: SGP,IDN,BRN,PHL,TLS,PNG,MYS
+Date: 2025-12
+Period: monthly
+Time Period: 00
+Variable: pressure
+API URL: https://wdqms.wmo.int/wdqmsapi/v1/download/gbon/synop/monthly/availability/?date=2025-12&period=00&variable=pressure&centers=DWD,ECMWF,JMA,NCEP
+Filtering countries: SGP,IDN,BRN,PHL,TLS,PNG,MYS
+2026-01-15 04:19:43 - Response received
+HTTP Code: 200
+CURL Error: Operation timed out after 30007 milliseconds with 126789 out of 4364677 bytes received
+Response (first 1000 chars): 
+2026-01-15 04:24:13 - Request started
+Territory: SGP,IDN,BRN,PHL,TLS,PNG,MYS
+Date: 2025-12
+Period: monthly
+Time Period: 00
+Variable: pressure
+API URL: https://wdqms.wmo.int/wdqmsapi/v1/download/gbon/synop/monthly/availability/?date=2025-12&period=00&variable=pressure&centers=DWD,ECMWF,JMA,NCEP
+Filtering countries: SGP,IDN,BRN,PHL,TLS,PNG,MYS
+2026-01-15 04:24:43 - Response received
+HTTP Code: 200
+CURL Error: Operation timed out after 30002 milliseconds with 393020 out of 4364677 bytes received
+Response (first 1000 chars): 
+2026-01-15 04:29:13 - Request started
+Territory: SGP,IDN,BRN,PHL,TLS,PNG,MYS
+Date: 2025-12
+Period: monthly
+Time Period: 00
+Variable: pressure
+API URL: https://wdqms.wmo.int/wdqmsapi/v1/download/gbon/synop/monthly/availability/?date=2025-12&period=00&variable=pressure&centers=DWD,ECMWF,JMA,NCEP
+Filtering countries: SGP,IDN,BRN,PHL,TLS,PNG,MYS
+2026-01-15 04:29:43 - Response received
+HTTP Code: 200
+CURL Error: Operation timed out after 30003 milliseconds with 12092 out of 4364677 bytes received
+Response (first 1000 chars): 
+2026-01-15 04:33:36 - Request started
+Territory: SGP,IDN,BRN,PHL,TLS,PNG,MYS
+Date: 2026-01
+Period: monthly
+Time Period: 00
+Variable: pressure
+API URL: https://wdqms.wmo.int/wdqmsapi/v1/download/gbon/synop/monthly/availability/?date=2026-01&period=00&variable=pressure&centers=DWD,ECMWF,JMA,NCEP
+Filtering countries: SGP,IDN,BRN,PHL,TLS,PNG,MYS
+2026-01-15 04:33:51 - Response received
+HTTP Code: 200
+Response (first 1000 chars): name,wigosid,country code,in OSCAR,longitude,latitude,#received,#expected (GBON),color code,description,variable,date,center
+
+2026-01-15 04:33:51 - JSON Parsing
+JSON Error: Syntax error
+2026-01-15 04:33:51 - Trying CSV parsing
+2026-01-15 04:33:51 - Final Results
+Total stations: 0
+Complete: 0
+Issues: 0
+Critical: 0
+Not received: 0
+2026-01-15 04:34:12 - Request started
+Territory: SGP,IDN,BRN,PHL,TLS,PNG,MYS
+Date: 2026-01
+Period: monthly
+Time Period: 00
+Variable: pressure
+API URL: https://wdqms.wmo.int/wdqmsapi/v1/download/gbon/synop/monthly/availability/?date=2026-01&period=00&variable=pressure&centers=DWD,ECMWF,JMA,NCEP
+Filtering countries: SGP,IDN,BRN,PHL,TLS,PNG,MYS
+2026-01-15 04:34:30 - Response received
+HTTP Code: 200
+Response (first 1000 chars): name,wigosid,country code,in OSCAR,longitude,latitude,#received,#expected (GBON),color code,description,variable,date,center
+
+2026-01-15 04:34:30 - JSON Parsing
+JSON Error: Syntax error
+2026-01-15 04:34:30 - Trying CSV parsing
+2026-01-15 04:34:30 - Final Results
+Total stations: 0
+Complete: 0
+Issues: 0
+Critical: 0
+Not received: 0
