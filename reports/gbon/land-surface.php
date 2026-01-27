@@ -259,6 +259,11 @@ include '../../includes/navigation.php';
                             <option value="30">30 Hari</option>
                         </select>
                     </div>
+                    <button onclick="downloadAnalyticsChart('timeseries')" class="p-1.5 text-gray-500 hover:text-bmkg-blue hover:bg-blue-50 rounded transition-colors" title="Download as PNG">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </button>
                 </div>
                 </div>
                 <div class="relative w-full" style="height: 350px;">
@@ -279,11 +284,18 @@ include '../../includes/navigation.php';
                 <div class="bg-gray-50 rounded-lg p-4 lg:p-6 relative">
                     <div class="flex justify-between items-center mb-4">
                         <div class="text-lg font-semibold text-gray-700">Status Distribution (Selected Stations)</div>
-                        <select id="chartTypeSelect" class="text-xs border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-bmkg-blue">
-                            <option value="pie">Pie Chart</option>
-                            <option value="doughnut">Doughnut Chart</option>
-                            <option value="bar">Bar Chart</option>
-                        </select>
+                        <div class="flex items-center gap-2">
+                            <select id="chartTypeSelect" class="text-xs border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-bmkg-blue">
+                                <option value="pie">Pie Chart</option>
+                                <option value="doughnut">Doughnut Chart</option>
+                                <option value="bar">Bar Chart</option>
+                            </select>
+                            <button onclick="downloadAnalyticsChart('status')" class="p-1.5 text-gray-500 hover:text-bmkg-blue hover:bg-blue-50 rounded transition-colors" title="Download as PNG">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                     <div class="relative h-64 lg:h-80">
                         <canvas id="statusChart" class="w-full h-full"></canvas>
@@ -296,6 +308,156 @@ include '../../includes/navigation.php';
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Country Comparison Charts Section -->
+    <div class="bg-white rounded-lg shadow-md p-4 lg:p-6 mb-6 relative">
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-6 gap-4">
+            <h2 class="text-xl font-semibold text-gray-800">Country Data Availability Comparison</h2>
+            <div class="flex flex-wrap items-center gap-3">
+                <label class="text-sm text-gray-600">Year:</label>
+                <select id="countryChartYear" class="px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-bmkg-blue focus:border-transparent">
+                    <!-- Will be populated dynamically -->
+                </select>
+                <label class="text-sm text-gray-600">Source:</label>
+                <select id="dataSourceSelect" class="px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-bmkg-blue focus:border-transparent">
+                    <option value="sample">Sample Data (Quick)</option>
+                    <option value="real">Real Data (WMO API)</option>
+                </select>
+                <button id="loadCountryCharts" class="px-4 py-2 bg-bmkg-blue text-white text-sm rounded-md hover:bg-blue-700 transition-colors">
+                    Load Charts
+                </button>
+            </div>
+        </div>
+        
+        <!-- Country Legend -->
+        <div class="flex flex-wrap gap-3 mb-6 p-3 bg-gray-50 rounded-lg">
+            <div class="flex items-center gap-1"><div class="w-4 h-1 rounded" style="background-color: #8B5CF6"></div><span class="text-xs">BRN</span></div>
+            <div class="flex items-center gap-1"><div class="w-4 h-1 rounded" style="background-color: #3B82F6"></div><span class="text-xs">IDN</span></div>
+            <div class="flex items-center gap-1"><div class="w-4 h-1 rounded" style="background-color: #10B981"></div><span class="text-xs">MYS</span></div>
+            <div class="flex items-center gap-1"><div class="w-4 h-1 rounded" style="background-color: #EC4899"></div><span class="text-xs">PHL</span></div>
+            <div class="flex items-center gap-1"><div class="w-4 h-1 rounded" style="background-color: #F59E0B"></div><span class="text-xs">PNG</span></div>
+            <div class="flex items-center gap-1"><div class="w-4 h-1 rounded" style="background-color: #06B6D4"></div><span class="text-xs">SGP</span></div>
+            <div class="flex items-center gap-1"><div class="w-4 h-1 rounded" style="background-color: #EF4444"></div><span class="text-xs">TLS</span></div>
+            <div class="flex items-center gap-1"><div class="w-4 h-1 rounded" style="background-color: #F97316"></div><span class="text-xs">USA</span></div>
+        </div>
+
+        <!-- Loading Overlay for Country Charts -->
+        <div id="countryChartsLoading" class="hidden absolute inset-0 bg-white bg-opacity-90 flex items-center justify-center z-10 rounded-lg">
+            <div class="text-center">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-bmkg-blue mx-auto mb-4"></div>
+                <div class="text-sm text-gray-600">Loading country comparison data...</div>
+                <div class="text-xs text-gray-400 mt-1">Fetching data for all variables...</div>
+            </div>
+        </div>
+        
+        <!-- Charts Grid - 2x3 layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Surface Pressure -->
+            <div class="bg-gray-50 rounded-lg p-4 relative">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="text-sm font-semibold text-gray-700">Availability of Surface Pressure Data</h3>
+                    <button onclick="downloadChart('pressure')" class="p-1.5 text-gray-500 hover:text-bmkg-blue hover:bg-blue-50 rounded transition-colors" title="Download as PNG">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="relative" style="height: 280px;">
+                    <canvas id="pressureChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- Temperature -->
+            <div class="bg-gray-50 rounded-lg p-4 relative">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="text-sm font-semibold text-gray-700">Availability of Temperature Data</h3>
+                    <button onclick="downloadChart('temperature')" class="p-1.5 text-gray-500 hover:text-bmkg-blue hover:bg-blue-50 rounded transition-colors" title="Download as PNG">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="relative" style="height: 280px;">
+                    <canvas id="temperatureChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- Zonal Wind -->
+            <div class="bg-gray-50 rounded-lg p-4 relative">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="text-sm font-semibold text-gray-700">Availability of Zonal Wind Data</h3>
+                    <button onclick="downloadChart('zonal_wind')" class="p-1.5 text-gray-500 hover:text-bmkg-blue hover:bg-blue-50 rounded transition-colors" title="Download as PNG">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="relative" style="height: 280px;">
+                    <canvas id="zonalWindChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- Meridional Wind -->
+            <div class="bg-gray-50 rounded-lg p-4 relative">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="text-sm font-semibold text-gray-700">Availability of Meridional Wind Data</h3>
+                    <button onclick="downloadChart('meridional_wind')" class="p-1.5 text-gray-500 hover:text-bmkg-blue hover:bg-blue-50 rounded transition-colors" title="Download as PNG">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="relative" style="height: 280px;">
+                    <canvas id="meridionalWindChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- Relative Humidity -->
+            <div class="bg-gray-50 rounded-lg p-4 relative">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="text-sm font-semibold text-gray-700">Availability of Relative Humidity Data</h3>
+                    <button onclick="downloadChart('humidity')" class="p-1.5 text-gray-500 hover:text-bmkg-blue hover:bg-blue-50 rounded transition-colors" title="Download as PNG">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="relative" style="height: 280px;">
+                    <canvas id="humidityChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- Upper-Air Data (Placeholder) -->
+            <div class="bg-gray-50 rounded-lg p-4 relative">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="text-sm font-semibold text-gray-700">Availability of Upper-Air Data</h3>
+                    <button onclick="downloadChart('upper_air')" class="p-1.5 text-gray-500 hover:text-bmkg-blue hover:bg-blue-50 rounded transition-colors" title="Download as PNG">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="relative" style="height: 280px;">
+                    <canvas id="upperAirChart"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Download All Button -->
+        <div class="flex justify-end mt-4 pt-4 border-t border-gray-200">
+            <button onclick="downloadAllCharts()" class="flex items-center gap-2 px-4 py-2 bg-green-600 text-white text-sm rounded-md hover:bg-green-700 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download All Charts (PNG)
+            </button>
+        </div>
+        
+        <!-- Footer info -->
+        <div class="text-xs text-gray-500 italic mt-4">
+            Data shows monthly average availability percentage per country. Source: WMO WDQMS API.
         </div>
     </div>
 
@@ -1819,11 +1981,293 @@ include '../../includes/navigation.php';
         });
     }
     
+    // ==========================================
+    // Country Comparison Line Charts
+    // ==========================================
+    
+    // Chart instances for country comparison
+    let countryCharts = {
+        pressure: null,
+        temperature: null,
+        zonal_wind: null,
+        meridional_wind: null,
+        humidity: null,
+        upper_air: null
+    };
+    
+    // Chart configuration for line charts
+    const lineChartConfig = {
+        type: 'line',
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom',
+                    labels: {
+                        usePointStyle: true,
+                        font: { size: 10 },
+                        padding: 10
+                    }
+                },
+                tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                    callbacks: {
+                        label: function(context) {
+                            const value = context.parsed.y;
+                            if (value === null) return `${context.dataset.label}: No data`;
+                            return `${context.dataset.label}: ${value}%`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    display: true,
+                    title: {
+                        display: true,
+                        text: 'Month',
+                        font: { size: 11 }
+                    },
+                    grid: {
+                        display: false
+                    }
+                },
+                y: {
+                    display: true,
+                    title: {
+                        display: true,
+                        text: 'Percentage',
+                        font: { size: 11 }
+                    },
+                    min: 0,
+                    max: 100,
+                    grid: {
+                        color: '#e5e7eb'
+                    }
+                }
+            },
+            interaction: {
+                mode: 'nearest',
+                axis: 'x',
+                intersect: false
+            }
+        }
+    };
+    
+    // Initialize country comparison charts
+    function initializeCountryCharts() {
+        const chartIds = {
+            'pressure': 'pressureChart',
+            'temperature': 'temperatureChart',
+            'zonal_wind': 'zonalWindChart',
+            'meridional_wind': 'meridionalWindChart',
+            'humidity': 'humidityChart',
+            'upper_air': 'upperAirChart'
+        };
+        
+        const defaultLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        
+        Object.entries(chartIds).forEach(([key, canvasId]) => {
+            const canvas = document.getElementById(canvasId);
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                countryCharts[key] = new Chart(ctx, {
+                    ...lineChartConfig,
+                    data: {
+                        labels: defaultLabels,
+                        datasets: [] // Will be populated when data loads
+                    }
+                });
+            }
+        });
+        
+        // Populate year selector
+        const yearSelect = document.getElementById('countryChartYear');
+        const currentYear = new Date().getFullYear();
+        for (let y = currentYear; y >= currentYear - 5; y--) {
+            const option = document.createElement('option');
+            option.value = y;
+            option.textContent = y;
+            yearSelect.appendChild(option);
+        }
+        
+        // Load button event listener
+        document.getElementById('loadCountryCharts').addEventListener('click', loadCountryChartsData);
+    }
+    
+    // Load data for country comparison charts
+    async function loadCountryChartsData() {
+        const loadingOverlay = document.getElementById('countryChartsLoading');
+        const yearSelect = document.getElementById('countryChartYear');
+        const dataSourceSelect = document.getElementById('dataSourceSelect');
+        const selectedYear = yearSelect.value;
+        const useSampleData = dataSourceSelect ? dataSourceSelect.value === 'sample' : true;
+        
+        // Show loading
+        loadingOverlay.classList.remove('hidden');
+        
+        try {
+            // Use sample API or real API based on selector
+            const apiFile = useSampleData ? 'reports_land_surface_yearly_sample.php' : 'reports_land_surface_yearly.php';
+            const url = `${API_ENDPOINT}${apiFile}?year=${selectedYear}&variable=all`;
+            console.log('Fetching country comparison data:', url, useSampleData ? '(sample)' : '(real data)');
+            
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            
+            const data = await response.json();
+            
+            if (data.success && data.data) {
+                // Update each chart with corresponding variable data
+                Object.entries(data.data).forEach(([variable, chartData]) => {
+                    if (countryCharts[variable]) {
+                        countryCharts[variable].data.labels = chartData.labels;
+                        countryCharts[variable].data.datasets = chartData.datasets.map(ds => ({
+                            label: ds.label,
+                            data: ds.data,
+                            borderColor: ds.borderColor,
+                            backgroundColor: ds.backgroundColor,
+                            fill: ds.fill,
+                            tension: ds.tension || 0.3,
+                            pointRadius: ds.pointRadius || 3,
+                            pointHoverRadius: ds.pointHoverRadius || 5,
+                            spanGaps: true
+                        }));
+                        countryCharts[variable].update();
+                    }
+                });
+                
+                // Show notice if sample data
+                if (data.is_sample) {
+                    console.log('Loaded sample data. Click "Load Real Data" for actual WMO data.');
+                }
+                
+                console.log('Country charts updated successfully');
+            } else {
+                throw new Error(data.error || 'Failed to load country data');
+            }
+            
+        } catch (error) {
+            console.error('Error loading country charts:', error);
+            // Silent fail on initial load, show alert on manual load
+            if (!useSampleData) {
+                alert('Failed to load country comparison data: ' + error.message);
+            }
+        } finally {
+            loadingOverlay.classList.add('hidden');
+        }
+    }
+    
+    // Load real data (from WMO API - may take longer)
+    function loadRealCountryData() {
+        loadCountryChartsData(false);
+    }
+    
+    // ==========================================
+    // Download Chart Functions
+    // ==========================================
+    
+    // Chart name mapping
+    const chartNameMap = {
+        'pressure': { chart: 'pressure', title: 'Surface_Pressure_Availability' },
+        'temperature': { chart: 'temperature', title: 'Temperature_Availability' },
+        'zonal_wind': { chart: 'zonal_wind', title: 'Zonal_Wind_Availability' },
+        'meridional_wind': { chart: 'meridional_wind', title: 'Meridional_Wind_Availability' },
+        'humidity': { chart: 'humidity', title: 'Relative_Humidity_Availability' },
+        'upper_air': { chart: 'upper_air', title: 'Upper_Air_Availability' }
+    };
+    
+    // Download single chart as PNG
+    function downloadChart(chartKey) {
+        const chartInfo = chartNameMap[chartKey];
+        if (!chartInfo || !countryCharts[chartInfo.chart]) {
+            console.error('Chart not found:', chartKey);
+            alert('Chart not available for download');
+            return;
+        }
+        
+        const chart = countryCharts[chartInfo.chart];
+        const yearSelect = document.getElementById('countryChartYear');
+        const year = yearSelect ? yearSelect.value : new Date().getFullYear();
+        
+        // Create download link
+        const link = document.createElement('a');
+        link.download = `${chartInfo.title}_${year}.png`;
+        link.href = chart.toBase64Image('image/png', 1.0);
+        link.click();
+        
+        console.log('Downloaded:', link.download);
+    }
+    
+    // Download all charts as PNG files
+    function downloadAllCharts() {
+        const yearSelect = document.getElementById('countryChartYear');
+        const year = yearSelect ? yearSelect.value : new Date().getFullYear();
+        
+        let downloadCount = 0;
+        
+        Object.entries(chartNameMap).forEach(([key, info], index) => {
+            if (countryCharts[info.chart]) {
+                // Delay each download slightly to avoid browser blocking
+                setTimeout(() => {
+                    const chart = countryCharts[info.chart];
+                    const link = document.createElement('a');
+                    link.download = `${info.title}_${year}.png`;
+                    link.href = chart.toBase64Image('image/png', 1.0);
+                    link.click();
+                    downloadCount++;
+                    console.log(`Downloaded (${downloadCount}/6):`, link.download);
+                }, index * 300); // 300ms delay between each download
+            }
+        });
+        
+        // Show notification
+        setTimeout(() => {
+            alert(`Downloaded ${Object.keys(chartNameMap).length} charts successfully!`);
+        }, Object.keys(chartNameMap).length * 300 + 500);
+    }
+    
+    // Download Station Data Analytics charts
+    function downloadAnalyticsChart(chartType) {
+        let chart = null;
+        let filename = '';
+        const dateSelect = document.getElementById('dateSelect');
+        const dateStr = dateSelect ? dateSelect.value : new Date().toISOString().split('T')[0];
+        
+        if (chartType === 'timeseries') {
+            chart = allStationsChart;
+            filename = `Data_Received_Over_Time_${dateStr}.png`;
+        } else if (chartType === 'status') {
+            chart = statusChart;
+            filename = `Status_Distribution_${dateStr}.png`;
+        }
+        
+        if (!chart) {
+            console.error('Analytics chart not found:', chartType);
+            alert('Chart not available for download. Please load the data first.');
+            return;
+        }
+        
+        // Create download link
+        const link = document.createElement('a');
+        link.download = filename;
+        link.href = chart.toBase64Image('image/png', 1.0);
+        link.click();
+        
+        console.log('Downloaded analytics chart:', filename);
+    }
+    
     // Initialize everything when DOM is loaded
     document.addEventListener('DOMContentLoaded', function() {
         initializeCharts();
         initializeControlPanel();
         initializePagination();
+        initializeCountryCharts(); // Initialize country comparison charts
         
         // Show initial loading
         showAllLoading(true);
@@ -1832,6 +2276,11 @@ include '../../includes/navigation.php';
         setTimeout(() => {
             loadData();
         }, 500);
+        
+        // Auto-load country charts with default year
+        setTimeout(() => {
+            loadCountryChartsData();
+        }, 1000);
         
         // Auto-refresh every 5 minutes
         setInterval(() => {
